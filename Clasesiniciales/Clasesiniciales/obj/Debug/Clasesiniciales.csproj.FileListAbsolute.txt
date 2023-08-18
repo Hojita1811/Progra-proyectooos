@@ -1,0 +1,7 @@
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\bin\Debug\Clasesiniciales.exe.config
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\bin\Debug\Clasesiniciales.exe
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\bin\Debug\Clasesiniciales.pdb
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\obj\Debug\Clasesiniciales.csproj.AssemblyReference.cache
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\obj\Debug\Clasesiniciales.csproj.CoreCompileInputs.cache
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\obj\Debug\Clasesiniciales.exe
+C:\Users\ruth.baezm\Documents\GitHub\Proyectitos\Clases xd\Clasesiniciales\Clasesiniciales\obj\Debug\Clasesiniciales.pdb
