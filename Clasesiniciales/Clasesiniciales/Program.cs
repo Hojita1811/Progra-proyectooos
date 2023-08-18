@@ -45,6 +45,50 @@ namespace Clasesiniciales
             mochilaAlberto.color.Rojo = 200;
             mochilaAlberto.color.Verde = 20;
             mochilaAlberto.color.Azul = 30;
-        }
+
+            Smartphone smartphoneFran = new Smartphone();
+            smartphoneFran.Modelo = "Xiaomi Redmi Note 11";
+        smartphoneFran.Tech = "GSM";
+        smartphoneFran.Anio = 2022;
+        smartphoneFran.Dispo = "Disponible";
+        smartphoneFran.Dim1 = 159.9f;
+        smartphoneFran.Dim2 = 73.9f;
+        smartphoneFran.Dim3 = 8.1f;
+        smartphoneFran.Peso = 179;
+        smartphoneFran.SIM = "Dual SIM (Nano-SIM, dual stand-by) IP53, dust and splash resistant";
+        public string Tipo;
+        public float Tamaño;
+        public int Resolancho;
+        public int Resolalto;
+        public string Protect;
+        public string OS;
+        public string Chip;
+        public string CPU;
+        public string GPU;
+        public string Card;
+        public int Memoria;
+        public int CamWide;
+        public string Feat;
+        public int VidP;
+        public int fps;
+        public int SCam;
+        public string SVid;
+        public string LoudS;
+        public bool Jack
+        public string WLAN;
+        public string BT;
+        public string Pos;
+        public bool NFC;
+        public bool Infrared;
+        public string Radio;
+        public string USB;
+        public string Sensors;
+        public string Bateria;
+        public string Carga;
+        public string Col;
+        public string Mod;
+        public string SAR;
+        public float Precio;
+    }
     }
 }

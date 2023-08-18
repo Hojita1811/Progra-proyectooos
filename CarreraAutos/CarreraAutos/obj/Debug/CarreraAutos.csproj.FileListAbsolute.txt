@@ -1,0 +1,7 @@
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\bin\Debug\CarreraAutos.exe.config
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\bin\Debug\CarreraAutos.exe
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\bin\Debug\CarreraAutos.pdb
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\obj\Debug\CarreraAutos.csproj.AssemblyReference.cache
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\obj\Debug\CarreraAutos.csproj.CoreCompileInputs.cache
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\obj\Debug\CarreraAutos.exe
+C:\Users\fegav\OneDrive\Documentos\GitHub\Progra-proyectooos\CarreraAutos\CarreraAutos\obj\Debug\CarreraAutos.pdb
