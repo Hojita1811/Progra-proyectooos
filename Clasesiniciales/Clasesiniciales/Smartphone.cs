@@ -14,7 +14,7 @@ namespace Smartphone
         public int Peso;
         public string SIM;
         public string Tipo;
-        public float Tamaño;
+        public float Tamanio;
         public int Resolancho;
         public int Resolalto;
         public string Protect;
