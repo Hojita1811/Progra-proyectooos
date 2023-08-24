@@ -1,0 +1,7 @@
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\bin\Debug\Música.exe.config
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\bin\Debug\Música.exe
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\bin\Debug\Música.pdb
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\obj\Debug\Música.csproj.AssemblyReference.cache
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\obj\Debug\Música.csproj.CoreCompileInputs.cache
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\obj\Debug\Música.exe
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\Música\Música\obj\Debug\Música.pdb
