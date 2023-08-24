@@ -8,6 +8,6 @@ namespace Música
         public string gen;
         public int anio;
         public int edad;
-        public string albumes;
+        public string nacion;
     }
 }
