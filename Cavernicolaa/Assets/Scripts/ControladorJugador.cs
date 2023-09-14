@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControladorJugador : MonoBehaviour
 {
     public float VelocidadCaminar = 1.5f;
+    public float jumpForce = 12;
     private Rigidbody2D MiCuerpo;
     private Animator MiAnimador;
 
@@ -18,7 +19,7 @@ public class ControladorJugador : MonoBehaviour
     void Update()
     {
         float velActualVert = MiCuerpo.velocity.y;
-
+       
         float movHoriz = Input.GetAxis("Horizontal");
         if (movHoriz > 0)//a la derecha
         {                                       //x, y y z
@@ -39,5 +40,12 @@ public class ControladorJugador : MonoBehaviour
             MiCuerpo.velocity = new Vector3(0, velActualVert, 0);
             MiAnimador.SetBool("caminando", false);
         }
+        if (Input.GetButtonDown("Jump")) //GetKey pa tecladoo
+        {
+            print("Saltooo");
+            MiCuerpo.AddForce(
+                new Vector3(0, jumpForce, 0), ForceMode2D.Impulse); 
+        }
+        MiAnimador.SetFloat("velvert", velActualVert);
     }
 }
