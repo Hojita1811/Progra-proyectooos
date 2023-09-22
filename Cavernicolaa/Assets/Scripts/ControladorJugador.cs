@@ -7,6 +7,7 @@ public class ControladorJugador : MonoBehaviour
     public float VelocidadCaminar = 1.5f;
     public float jumpForce = 12;
     public bool enPiso = false;
+    public int saltoDoble = 2;
     private Rigidbody2D MiCuerpo;
     private Animator MiAnimador;
 
@@ -25,7 +26,15 @@ public class ControladorJugador : MonoBehaviour
         comprobarPiso();
         float velActualVert = MiCuerpo.velocity.y;
        
-        float movHoriz = Input.GetAxis("Horizontal");
+        if (saltoDoble <= 0)
+        {
+            if(enPiso)
+            {
+                saltoDoble = 2;
+            }
+        }
+
+    float movHoriz = Input.GetAxis("Horizontal");
         if (movHoriz > 0)//a la derecha
         {                                       //x, y y z
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -45,19 +54,24 @@ public class ControladorJugador : MonoBehaviour
             MiCuerpo.velocity = new Vector3(0, velActualVert, 0);
             MiAnimador.SetBool("caminando", false);
         }
-        if (enPiso) {
-            if (Input.GetButtonDown("Jump")) //GetKey pa tecladoo
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (enPiso) 
             {
-                print("Saltooo");
-                MiCuerpo.AddForce(
-                    new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
-                
-            }    
-        }
-        else if (enPiso == false){
-               
+                {
+                    print("Saltooo");
+                    MiCuerpo.AddForce(
+                        new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+                    saltoDoble = saltoDoble - 1;
+                }    
+            }
+        else if (enPiso == false && saltoDoble > 0){
+            MiCuerpo.AddForce(
+                 new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+            saltoDoble = saltoDoble - 1;
         }
         MiAnimador.SetFloat("velvert", velActualVert);
+    }
     }
 
     void comprobarPiso()
