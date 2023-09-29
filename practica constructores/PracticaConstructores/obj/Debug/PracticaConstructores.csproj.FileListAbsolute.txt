@@ -1,0 +1,7 @@
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\bin\Debug\PracticaConstructores.exe.config
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\bin\Debug\PracticaConstructores.exe
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\bin\Debug\PracticaConstructores.pdb
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\obj\Debug\PracticaConstructores.csproj.AssemblyReference.cache
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\obj\Debug\PracticaConstructores.csproj.CoreCompileInputs.cache
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\obj\Debug\PracticaConstructores.exe
+C:\Users\irwin.cepedas\Documents\GitHub\ProyectoProgram\ClasessIniciales_002\PracticaConstructores\obj\Debug\PracticaConstructores.pdb

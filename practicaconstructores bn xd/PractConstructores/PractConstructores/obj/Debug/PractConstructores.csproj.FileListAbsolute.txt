@@ -1,0 +1,7 @@
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\bin\Debug\PractConstructores.exe.config
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\bin\Debug\PractConstructores.exe
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\bin\Debug\PractConstructores.pdb
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\obj\Debug\PractConstructores.csproj.AssemblyReference.cache
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\obj\Debug\PractConstructores.csproj.CoreCompileInputs.cache
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\obj\Debug\PractConstructores.exe
+C:\Users\fernando.garciave\Documents\GitHub\Progra-proyectooos\practicaconstructores bn xd\PractConstructores\PractConstructores\obj\Debug\PractConstructores.pdb
