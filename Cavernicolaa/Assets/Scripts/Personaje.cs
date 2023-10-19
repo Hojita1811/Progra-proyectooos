@@ -14,6 +14,15 @@ public class Personaje : MonoBehaviour
         
     }
 
+    public void hacerDanio(int puntos, GameObject atacante) 
+    {
+        print(name + "recibe daño de "
+            + puntos + " por " + atacante.name);
+
+        //resto los puntos al HP actual
+        hp = hp - puntos;
+    }
+
     // Update is called once per frame
     void Update()
     {
