@@ -8,6 +8,10 @@ public class Personaje : MonoBehaviour
     public int hpMax = 100;
     public int score = 0;
     public int vidas = 3;
+    public GameObject efectoSangrePreFab;
+    public GameObject efectoAwa;
+    private Animator MiAnimador;
+    private reproductorsonidos misSonidos;
 
     void Start()
     {
@@ -21,6 +25,21 @@ public class Personaje : MonoBehaviour
 
         //resto los puntos al HP actual
         hp = hp - puntos;
+
+        MiAnimador.SetTrigger("DAÑAR");
+        GameObject sangre = Instantiate(
+            efectoSangrePreFab, transform);
+        misSonidos.reproducir("DAÑAR");
+    }
+
+    public void muerteInstant(GameObject agua)
+    {
+        hp = 0;
+        //o vidas = vidas -1;
+        vidas--;
+        GameObject awa = Instantiate(
+            efectoAwa, this.transform);
+        misSonidos.reproducir("MORIR");
     }
 
     // Update is called once per frame
