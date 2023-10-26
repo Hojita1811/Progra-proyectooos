@@ -10,11 +10,13 @@ public class ControladorJugador : MonoBehaviour
     public int saltoDoble = 2;
     private Rigidbody2D MiCuerpo;
     private Animator MiAnimador;
+    private reproductorsonidos misSonidos;
 
     void Start()
     {
         MiCuerpo = GetComponent<Rigidbody2D>();
         MiAnimador = GetComponent<Animator>();
+        misSonidos = GetComponent<reproductorsonidos>();
     }
 
     // Update is called once per frame
@@ -71,7 +73,8 @@ public class ControladorJugador : MonoBehaviour
             saltoDoble = saltoDoble - 1;
         }
         MiAnimador.SetFloat("velvert", velActualVert);
-    }
+            misSonidos.reproducir("SALTAR");
+        }
     }
 
     void comprobarPiso()
