@@ -9,6 +9,7 @@ public class ControladorJugador : MonoBehaviour
     public float fuerzaSalto = 50f;
     public bool enPiso = false;
     public float saltosMax = 2f;
+    public int puntosDanio = 15;
 
     private Rigidbody2D miCuerpo;
     //private SpriteRenderer cavernicola;
@@ -76,9 +77,31 @@ public class ControladorJugador : MonoBehaviour
             misSonido.reproducir("SALTAR");
         }
 
+        if(Input.GetButtonDown("Fire1"))
+        {//atacar
+            miAnimador.SetTrigger("ATACAR");
+        } 
+
+        
+
         miAnimador.SetFloat("Vel_Vert", velActualVert);
         
     }
+    
+    //en controladorjugador, metodo OnTriggerEnter2D, validar si lo que esta pegando tiene el tag de enemigo, obtener componente tipo char
+        //el componente que se obtuvo
+    private void OnTriggerEnter2D(Collision2D collision)
+        {
+            GameObject otro = collision.gameObject;
+            if (otro.tag == "Enemigo")
+            {
+                //Accedo al componente de tipo Personaje
+                //del objeto con el que choqué
+                Personaje elPerso = otro.GetComponent<Personaje>();
+                //Aplico el daño al otro invocando al metodo hacer daño
+                elPerso.hacerDanio(puntosDanio, this.gameObject);
+            }
+        }
     public void comprobarPiso()
     {
         //Lanzo un rayo de deteccion
