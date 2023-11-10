@@ -87,12 +87,12 @@ public class ControladorJugador : MonoBehaviour
         miAnimador.SetFloat("Vel_Vert", velActualVert);
         
     }
-    
+
     //en controladorjugador, metodo OnTriggerEnter2D, validar si lo que esta pegando tiene el tag de enemigo, obtener componente tipo char
-        //el componente que se obtuvo
-    private void OnTriggerEnter2D(Collision2D collision)
-        {
-            GameObject otro = collision.gameObject;
+    //el componente que se obtuvo
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+            GameObject otro = trigger.gameObject;
             if (otro.tag == "Enemigo")
             {
                 //Accedo al componente de tipo Personaje
