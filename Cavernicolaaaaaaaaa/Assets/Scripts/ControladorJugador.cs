@@ -10,6 +10,7 @@ public class ControladorJugador : MonoBehaviour
     public bool enPiso = false;
     public float saltosMax = 2f;
     public int puntosDanio = 15;
+    private Personaje miPersonaje;
 
     private Rigidbody2D miCuerpo;
     //private SpriteRenderer cavernicola;
@@ -24,6 +25,7 @@ public class ControladorJugador : MonoBehaviour
         miAnimador = GetComponent<Animator>();
         misSonido = GetComponent<ReproductorSonidos>();
         saltosRest = saltosMax;
+        miPersonaje = GetComponent<Personaje>();
     }
 
     // Update is called once per frame
@@ -38,14 +40,14 @@ public class ControladorJugador : MonoBehaviour
         //eje horizontal de las flechas
         float movHoriz = Input.GetAxis("Horizontal");
 
-        if (movHoriz > 0)//a la derecha
+        if (movHoriz > 0 && !miPersonaje.aturdido && !miPersonaje.muerto)//a la derecha (! es nooo)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             miCuerpo.velocity = new Vector3(velocidadCaminar, velActualVert, 0);
             //cavernicola.flipX = false;
             miAnimador.SetBool("Caminando", true);
         }
-        else if (movHoriz < 0)//a la izquierda
+        else if (movHoriz < 0 && !miPersonaje.aturdido && !miPersonaje.muerto)//a la izquierda
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
             miCuerpo.velocity = new Vector3(-velocidadCaminar, velActualVert, 0);
@@ -69,7 +71,7 @@ public class ControladorJugador : MonoBehaviour
             miAnimador.SetBool("Piso", false);
         }
 
-        if (Input.GetButtonDown("Jump") && saltosRest > 0)
+        if (Input.GetButtonDown("Jump") && saltosRest > 0 && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             saltosRest--;
             miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
@@ -77,7 +79,7 @@ public class ControladorJugador : MonoBehaviour
             misSonido.reproducir("SALTAR");
         }
 
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && !miPersonaje.aturdido && !miPersonaje.muerto)
         {//atacar
             miAnimador.SetTrigger("ATACAR");
         } 

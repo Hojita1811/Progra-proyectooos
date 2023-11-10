@@ -9,6 +9,7 @@ public class Enemigopequeno : MonoBehaviour
     private GameObject heroe;
     private Animator animadorr;
     private Rigidbody2D miCuerpoo;
+    private Personaje miEnemigo;
     // Start is called before the first frame update
 
     public int puntosDanio = 10;
@@ -18,7 +19,7 @@ public class Enemigopequeno : MonoBehaviour
             + collision.gameObject.name);
 
         GameObject otro = collision.gameObject;
-        if (otro.tag == "Player")
+        if (otro.tag == "Player" && !miEnemigo.aturdido && !miEnemigo.muerto)
         {
             //Accedo al componente de tipo Personaje
             //del objeto con el que choqué
@@ -32,6 +33,7 @@ public class Enemigopequeno : MonoBehaviour
         heroe = GameObject.FindWithTag("Player");
         animadorr = GetComponent<Animator>();
         miCuerpoo = GetComponent<Rigidbody2D>();
+        miEnemigo = GetComponent<Personaje>();
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class Enemigopequeno : MonoBehaviour
 
         float distancia = (posYo - posHeroe).magnitude;//vector entre los dos
         float velActualVert = miCuerpoo.velocity.y;
-        if (distancia<distanciaAgro)
+        if (distancia<distanciaAgro && !miEnemigo.aturdido && !miEnemigo.muerto)
         {   //el heroe esta dentro de la zona de agro
 
             if(posHeroe.x > posYo.x)

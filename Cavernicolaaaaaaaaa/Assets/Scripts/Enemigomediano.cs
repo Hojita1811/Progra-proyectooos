@@ -11,12 +11,14 @@ public class Enemigomediano : MonoBehaviour
     private Animator animadorr;
     private Rigidbody2D miCuerpoo;
     public int puntosDanio = 10;
+    private Personaje miEnemigo;
     // Start is called before the first frame update
     void Start()
     {
         heroe = GameObject.FindWithTag("Player");
         animadorr = GetComponent<Animator>();
         miCuerpoo = GetComponent<Rigidbody2D>();
+        miEnemigo = GetComponent<Personaje>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Enemigomediano : MonoBehaviour
 
         float distancia = (posYo - posHeroe).magnitude;//vector entre los dos
         float velActualVert = miCuerpoo.velocity.y;
-        if (distancia < distanciaAgro && distancia > distanciaAgrocortaa)
+        if (distancia < distanciaAgro && distancia > distanciaAgrocortaa && !miEnemigo.aturdido && !miEnemigo.muerto)
         {   //el heroe esta dentro de la zona de agro
 
             if (posHeroe.x > posYo.x)
@@ -37,7 +39,7 @@ public class Enemigomediano : MonoBehaviour
                 miCuerpoo.velocity = new Vector3(velCaminar, velActualVert, 0);
                 animadorr.SetBool("atacar", false);
             }
-            else
+            else if (!miEnemigo.aturdido && !miEnemigo.muerto)
             {//el heroe está a la izquierda
                 transform.rotation = Quaternion.Euler(0, 180, 0);
                 animadorr.SetBool("Caminando", true);
@@ -47,7 +49,7 @@ public class Enemigomediano : MonoBehaviour
         }
         else if (distancia < distanciaAgro && distancia < distanciaAgrocortaa)
         {
-            if (posHeroe.x > posYo.x)
+            if (posHeroe.x > posYo.x && !miEnemigo.aturdido && !miEnemigo.muerto)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 animadorr.SetBool("Caminando", true);
