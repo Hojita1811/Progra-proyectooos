@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControladorJugador : MonoBehaviour
 {
@@ -104,6 +106,10 @@ public class ControladorJugador : MonoBehaviour
                 elPerso.hacerDanio(puntosDanio, this.gameObject);
             }
         }
+    public void morirPersonaje()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void comprobarPiso()
     {
         //Lanzo un rayo de deteccion

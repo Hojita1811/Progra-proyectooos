@@ -14,7 +14,7 @@ public class Personaje : MonoBehaviour
     private ReproductorSonidos misSonido;
     public bool aturdido = false;
     public bool muerto = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +30,19 @@ public class Personaje : MonoBehaviour
 
         //resto los puntos al HP actual
         hp = hp - puntos;
-        if (hp<= 0 && vidas>=0)
+        miAnimador.SetTrigger("DAÑAR");
+        if (hp<= 0 && vidas<=0)
         {
+            Personaje elPerso = GetComponent<Personaje>();
+            elPerso.morirAgua(100,this.gameObject);
+        }
+        else if (hp <= 0 && vidas > 0)
+        {
+            vidas--;
             muerto = true;
             miAnimador.SetTrigger("MUERTE");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        miAnimador.SetTrigger("DAÑAR");
-
+        
         //Creo una instancia de la part de sangre
         GameObject sangre = Instantiate(
             efectoSangrePrefab, transform);
@@ -51,18 +56,19 @@ public class Personaje : MonoBehaviour
 
     public void morirAgua(int vidaPerdida, GameObject atacante)
     {
+        print(name + "recibe daño de "
+      + atacante.name);
+
         vidas = vidas - vidaPerdida;
         hp = 0;
         misSonido.reproducir("MORIR");
+        miAnimador.SetTrigger("MUERTE");
+        muerto = true;
+        
     }
 
     private void desaturdir()
     {
         aturdido = false;
-    }
-
-    private void estaMuerto()
-    {
-        muerto = true;
     }
 }

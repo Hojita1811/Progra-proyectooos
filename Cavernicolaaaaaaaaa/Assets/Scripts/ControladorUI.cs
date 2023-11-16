@@ -10,6 +10,7 @@ public class ControladorUI : MonoBehaviour
     public Image barraHPHeroe;
     public Text etiquetaScore;
     public Text etiquetaVidas;
+    public GameObject gameOver;
 
     void Start()
     {
@@ -28,5 +29,9 @@ public class ControladorUI : MonoBehaviour
             + heroe.score.ToString();
         etiquetaVidas.text =
              heroe.vidas.ToString();
+        if(heroe.vidas <= 0)
+        {
+            gameOver.SetActive(true);
+        }
     }
 }
