@@ -31,10 +31,11 @@ public class Personaje : MonoBehaviour
         //resto los puntos al HP actual
         hp = hp - puntos;
         miAnimador.SetTrigger("DAÑAR");
-        if (hp<= 0 && vidas<=0)
+        if (hp<= 0 && tag == "Player")
         {
             Personaje elPerso = GetComponent<Personaje>();
-            elPerso.morirAgua(100,this.gameObject);
+            elPerso.morirAgua(0,this.gameObject);
+            Invoke("morirPersonaje",2.5f);
         }
         else if (hp <= 0 && vidas > 0)
         {
@@ -66,7 +67,10 @@ public class Personaje : MonoBehaviour
         muerto = true;
         
     }
-
+    public void morirPersonaje()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     private void desaturdir()
     {
         aturdido = false;
