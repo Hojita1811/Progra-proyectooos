@@ -19,6 +19,7 @@ public class ControladorJugador : MonoBehaviour
     private float saltosRest;
     private ReproductorSonidos misSonido;
     private Personaje miPersonaje;
+    private Vector3 Respawn;
 
 
     void Start()
@@ -29,6 +30,7 @@ public class ControladorJugador : MonoBehaviour
         misSonido = GetComponent<ReproductorSonidos>();
         miPersonaje = GetComponent<Personaje>();
         saltosRest = saltosMax;
+        Respawn = transform.position;
     }
 
     // Update is called once per frame
@@ -89,7 +91,7 @@ public class ControladorJugador : MonoBehaviour
         }
         if (miPersonaje.hp <= 0)
         {
-            Invoke("morirPersonaje", 1.0f);
+            Invoke("morirPersonaje", 2.5f);
         }
 
         miAnimador.SetFloat("Vel_Vert", velActualVert);
