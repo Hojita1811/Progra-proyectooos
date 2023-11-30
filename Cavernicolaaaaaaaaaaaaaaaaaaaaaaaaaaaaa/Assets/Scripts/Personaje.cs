@@ -100,10 +100,9 @@ public class Personaje : MonoBehaviour
 
         muerto = true;
     }
-    public void Festejar()
+    public void Festejar(GameObject perso)
     {
         print(name + "Toca la meta");
-        misSonido.reproducir("CELEBRA");
         miAnimador.SetTrigger("Celebracion");
     }
 }

@@ -27,7 +27,6 @@ public class Personaje : MonoBehaviour
     {
         print(name + "recibe daño de "
             + puntos + " por " + atacante.name);
-
         //resto los puntos al HP actual
         hp = hp - puntos;
         miAnimador.SetTrigger("DAÑAR");

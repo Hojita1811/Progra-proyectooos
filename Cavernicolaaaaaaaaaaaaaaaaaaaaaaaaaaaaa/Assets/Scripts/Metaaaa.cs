@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Metaaaa : MonoBehaviour
 {
     private ReproductorSonidos misSonido;
-    private GameObject checkpoint;
-    public GameObject reaparecePrefab;
     public GameObject CelebPrefab;
-    private Personaje miPersonaje;
+    public GameObject CelebPrefab2;
     private Animator miAnimador;
     void Start()
     {
         misSonido = GetComponent<ReproductorSonidos>();
-        checkpoint = GameObject.FindGameObjectWithTag("Player");
-        miPersonaje = GetComponent<Personaje>();
+        miAnimador = GetComponent<Animator>();
         
     }
 
@@ -27,19 +25,17 @@ public class Metaaaa : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject otro = collision.gameObject;
-        Personaje elPerso = otro.GetComponent<Personaje>();
 
         if (otro.tag == "Player")
         {
             print("El " + name + " colisiona con " + collision);
-            misSonido.reproducir("Vamoooo");
-            GameManager.x = transform.position.x;
-            GameManager.y = transform.position.y;
+            misSonido.reproducir("Celebrar");
+            GameObject celebrar = Instantiate(CelebPrefab);
+            GameObject celeee = Instantiate(CelebPrefab2);
+            celebrar.transform.position = this.transform.position;
+            Personaje elPerso = otro.GetComponent<Personaje>();
             GetComponent<BoxCollider2D>().enabled = false;
-            GameObject reaparece = Instantiate(reaparecePrefab);
-            reaparece.transform.position = this.transform.position;
-            Destroy(reaparece, 3f);
-            Invoke("Festejar",5);
+            elPerso.Festejar(this.gameObject);
         }
     }
 }
