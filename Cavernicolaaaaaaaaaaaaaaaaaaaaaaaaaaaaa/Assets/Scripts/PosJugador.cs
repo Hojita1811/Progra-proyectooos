@@ -6,13 +6,10 @@ using UnityEngine.SceneManagement;
 public class PosJugador : MonoBehaviour
 {
     // Start is called before the first frame update
-    private GameController gc;
     private Personaje miPersonaje;
     
     void Start()
     {
-        gc = GameObject.FindGameObjectWithTag("GC").GetComponent<GameController>();
-        transform.position = gc.ultimoCheckpoint;
         miPersonaje = GetComponent<Personaje>();
     }
 
